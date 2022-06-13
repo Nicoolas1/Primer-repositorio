@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.grilla {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr 2.5fr 1fr;
+    grid-template-areas:
+        "nav header header header"
+        "nav primeraSeccion primeraSeccion aside"
+        "nav segundaSeccion segundaSeccion aside"
+        "nav form form aside"
+        "footer footer footer footer";
+    background-color: beige;
+    color: black;
+}
+
+/* NAV */
+.nav {
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translate(3%, 20vh);
+}
+
+.nav ul {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.nav li {
+    list-style: none;
+    padding: 20px;
+    height: 30px;
+}
+
+.nav li:hover {
+    background-color: green;
+}
+
+.nav a {
+    color: black;
+    text-decoration: none;
+}
+
+.nav img {
+    width: 150px;
+}
+
+/* HEADER */
+.header {
+    grid-area: header;
+    text-align: center;
+    background-color: #c6c6c6;
+    color: black;
+    height: 13vh;
+    padding-top: 50px;
+    background-image: linear-gradient(to right, green, rgb(51, 128, 0), rgb(109, 128, 0));
+}
+
+.header h1 {
+    font-family: 'Lobster', cursive;
+    transform: scale(2);
+}
+
+.header p {
+    max-width: 700px;
+    margin: 15px auto;
+}
+
+/*PRIMERA SECCION*/
+
+.primeraSeccion {
+    grid-area: primeraSeccion;
+    /* Unidad relativa 16px = 1rem */
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.primeraSeccion p {
+    max-width: 900px;
+    text-align: center;
+    margin: 3rem;
+}
+
+.primeraSeccion h2 {
+    font-size: 3rem;
+}
+
+.primeraSeccion button {
+    padding: 15px;
+    margin: 15px;
+    transform: skew(20deg);
+}
+
+.primeraSeccion button:hover {
+    transform: scale(1.1);
+}
+
+/*SEGUNDA SECCION*/
+
+.segundaSeccion {
+    grid-area: segundaSeccion;
+    display: flex;
+    flex-direction: column;
+    margin: 10rem;
+}
+
+.segundaSeccion div {
+    display: flex;
+    margin: 2rem;
+
+}
+
+.segundaSeccion img {
+    max-width: 300px;
+    margin-left: 2rem;
+    transform: rotate(30deg);
+}
+
+.segundaSeccion h3 {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* FORMULARIO */
+
+.form {
+    grid-area: form;
+    min-height: 25vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form h3 {
+    font-size: 3rem;
+}
+
+.form div {
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form input {
+    height: 1.5rem;
+    width: 400px;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.form input[type=submit]:hover {
+    background-color: black;
+    color: white;
+}
+
+.form input:focus {
+    width: 500px;
+    transition: .5s;
+}
+
+/* ASIDE */
+
+.aside {
+    grid-area: aside;
+    background-image: url('https://static.wikia.nocookie.net/tatsufannon/images/4/40/S%C3%ADmbolo_del_Clan_Nara.png/revision/latest?cb=20130911021812&path-prefix=es');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0%;
+}
+
+/* FOOTER */
+
+.footer {
+    grid-area: footer;
+    background-color: greenyellow;
+    animation-name: unaAnimacion;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.footer i {
+    font-size: 2rem;
+}
+
+
+/* HTML FIGURAS  */
+
+.div1 {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr 2.5fr 1fr;
+    grid-template-areas:
+        "nav header header header"
+        "nav primeraSeccion primeraSeccion aside"
+        "nav segundaSeccion segundaSeccion aside"
+        "nav form form aside"
+        "footer footer footer footer";
+    background-color: cyan;
+    color: black;
+}
+
+/* NAV */
+.nav2 {
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav2 ul {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.nav2 li {
+    list-style: none;
+    padding: 20px;
+    height: 30px;
+}
+
+.nav2 li:hover {
+    background-color: rgb(0, 204, 255);
+}
+
+.nav2 a {
+    color: black;
+    text-decoration: none;
+}
+
+.nav2 img {
+    width: 150px;
+}
+
+/* HEADER */
+.header2 {
+    grid-area: header;
+    text-align: center;
+    background-color: #c6c6c6;
+    color: black;
+    height: 13vh;
+    padding-top: 50px;
+    background-image: linear-gradient(to right, rgb(0, 34, 128), rgb(0, 77, 128), rgb(0, 128, 111));
+}
+
+.header2 h1 {
+    font-family: 'Lobster', cursive;
+}
+
+.header2 p {
+    max-width: 700px;
+    margin: 15px auto;
+}
+
+@keyframes unaAnimacion{
+    0% {
+        background-color: #4f52db;
+    }
+    
+    25% {
+        background-color: blueviolet;
+    }
+    50% {
+        background-color: crimson;
+    }
+
+
+    75% {
+        background-color: chocolate;
+    }
+
+    100% {
+        background-color: darkorange;
+    }
+}
+
+/* MEDIA QUERY*/
+
+@media (max-width: 768px) {
+    .grilla {
+        grid-template-areas:
+            "nav nav nav nav"
+            "header header header header"
+            "primeraSeccion primeraSeccion primeraSeccion primeraSeccion "
+            "segundaSeccion segundaSeccion segundaSeccion segundaSeccion"
+            "form form form form"
+            "footer footer footer footer"
+        ;
+    }
+
+    .div1 {
+        grid-template-areas:
+            "nav nav nav nav"
+            "header header header header"
+            "primeraSeccion primeraSeccion primeraSeccion primeraSeccion "
+            "segundaSeccion segundaSeccion segundaSeccion segundaSeccion"
+            "form form form form"
+            "footer footer footer footer"
+        ;
+    }
+
+    .aside {
+        display: none;
+    }
+
+    .aside2 {
+        display: none;
+    }
+
+    .nav {
+        flex-direction: row;
+    }
+
+    .nav2 {
+        flex-direction: row;
+    }
+
+    .nav ul {
+        display: flex;
+        /* flex-direction: row; */
+    }
+
+    .nav2 ul {
+        display: flex;
+        /* flex-direction: row; */
+    }
+
+}
+
+@media (max-width: 480px) {
+    .segundaSeccion img {
+        display: none;
+    }
+
+}
