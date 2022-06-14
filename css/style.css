@@ -95,7 +95,7 @@
 .primeraSeccion button {
     padding: 15px;
     margin: 15px;
-    transform: skew(20deg);
+    transform: skew(30deg);
 }
 
 .primeraSeccion button:hover {
