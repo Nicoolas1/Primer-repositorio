@@ -181,7 +181,7 @@
     grid-area: footer;
     background-color: greenyellow;
     animation-name: unaAnimacion;
-    animation-duration: 5s;
+    animation-duration: 4s;
     animation-iteration-count: infinite;
 }
 
