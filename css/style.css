@@ -98,7 +98,7 @@
     transform: skew(30deg);
 }
 
-.primeraSeccion button:hover {
+.primeraSeccion button:hover{
     transform: scale(1.1);
 }
 
