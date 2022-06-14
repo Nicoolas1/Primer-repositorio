@@ -162,7 +162,7 @@
 
 .form input:focus {
     width: 500px;
-    transition: .5s;
+    transition: .4s;
 }
 
 /* ASIDE */
